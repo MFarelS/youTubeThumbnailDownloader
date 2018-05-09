@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>YouTube Thumbnail Downloader</title>
+  
+  
+  <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+  
+
+
+<div class="thumbnail">
+
+		  <img src="img/logo.svg">
+		  <br>
+		  <input v-model="image" placeholder="Place a YouTube video url here!">
+
+<transition name="fade">
+<p v-if='image'>Right-click the image you would like to download then click "Save Image As..."</p>
+</transition>
+
+    
+<div class="imagecontainer">
+
+    <transition name="fade">
+      <img v-if='image.includes("youtube.com")' :src=" 'http://img.youtube.com/vi/' + String(/=.*/.exec(image)).split('=').pop() + '/maxresdefault.jpg'">
+    </transition>
+
+    <br>
+
+    <transition name="fade">
+      <img v-if='image.includes("youtube.com")' :src=" 'http://img.youtube.com/vi/' + String(/=.*/.exec(image)).split('=').pop() + '/hqdefault.jpg'">
+    </transition>
+
+    <br>
+
+    <transition name="fade">
+      <img v-if='image.includes("youtube.com")' :src=" 'http://img.youtube.com/vi/' + String(/=.*/.exec(image)).split('=').pop() + '/mgdefault.jpg'">
+    </transition>
+
+</div>
+
+</div>
+
+<script src='https://cdn.jsdelivr.net/npm/vue'></script>
+<script  src="js/index.js"></script>
+
+</body>
+
+</html>

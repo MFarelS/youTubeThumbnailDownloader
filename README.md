@@ -2,4 +2,4 @@
 
 #### YouTube Thumbnail Downloader
 
-A Simple Vue.js application for downloading the thumbnails of YouTube videos. Working example [here](http://andrewtrout.com/youtubedownloader/ "here").
+A simple Vue.js application for downloading the thumbnails of YouTube videos. Working example [here](http://andrewtrout.com/youtubedownloader/ "here").
